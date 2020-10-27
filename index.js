@@ -1,13 +1,18 @@
+//constants
 const DISCORD = require("discord.js");
 const CLIENT = new DISCORD.Client();
 const TOKEN = "";
 const PREFIX = "!";
+//client login
 CLIENT.login(TOKEN);
+
+//first commit
 
 CLIENT.on("ready", () => {
     console.log("On");
 });
 
+//second commit
 CLIENT.on("message", message => {
     message.content.trim().toLowerCase();
 
@@ -18,6 +23,7 @@ CLIENT.on("message", message => {
         ExecuteCommand(message, cmd);   
 });
 
+//third commit
 function ExecuteCommand(message, args){   
     switch(args[0]){
         case "hello":
